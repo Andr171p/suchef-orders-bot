@@ -1,7 +1,7 @@
 from pydantic import BaseModel, field_validator
 from typing import List, Optional
 
-from src import utils
+from src.app.schemas import utils
 
 
 class OrderSchema(BaseModel):

@@ -4,11 +4,11 @@ from typing import Any, Dict, List
 
 
 from src.app.schemas.order import OrderSchema
-from src.message.order_status import OrderStatus
-from src.database.services.service import user_service
-from src.service import api
+from src.messages.order_status import OrderStatus
+from src.database.service import user_service
+from src.api import service as api_service
 from src.utils import load_json
-from src.config import config
+from src.config import settings
 
 
 status_router = Router()
@@ -19,7 +19,7 @@ async def get_order_status(message: Message) -> None:
     user_id: int = message.from_user.id
     user = await user_service.get_user(user_id)
     phone: str = user.phone
-    response: Dict[str, Any] = await api.get_user_orders(phone=phone)
+    response: Dict[str, Any] = await api_service.get_user_orders(phone)
     orders: List[Dict[str, Any]] = response['data']['orders']
     if len(orders) != 0:
         for order in orders:

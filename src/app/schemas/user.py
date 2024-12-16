@@ -1,6 +1,5 @@
 from pydantic import BaseModel, field_validator
-
-from src.utils import validate_phone
+import re
 
 
 class UserSchema(BaseModel):
@@ -11,6 +10,7 @@ class UserSchema(BaseModel):
     @field_validator("phone")
     @classmethod
     def validate_phone(cls, value: str) -> str:
-        if validate_phone(phone=value):
+        pattern = r'\+\d$\d{3}$\d{3}-\d{2}-\d{2}'
+        if bool(re.fullmatch(pattern, value)):
             raise ValueError("Invalid phone format")
         return value

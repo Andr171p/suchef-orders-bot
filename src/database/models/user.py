@@ -6,7 +6,7 @@ from typing import TypeVar
 from src.database.base import Base
 
 
-class AbstractBase(AsyncAttrs, Base):
+class Abstract(AsyncAttrs, Base):
     __tablename__ = "users"
 
     id: Mapped[int] = mapped_column(
@@ -17,11 +17,11 @@ class AbstractBase(AsyncAttrs, Base):
 
 ModelType = TypeVar(
     name="ModelType",
-    bound=AbstractBase
+    bound=Abstract
 )
 
 
-class UserModel(AbstractBase):
+class User(Abstract):
     user_id: Mapped[int] = mapped_column(BigInteger)
     username: Mapped[str] = mapped_column(nullable=True)
     phone: Mapped[str]

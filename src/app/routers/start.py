@@ -6,7 +6,7 @@ from src.config import config
 from src.utils import load_json
 from src.app.keyboards.start import start_kb
 from src.app.keyboards.order_status import order_status_kb
-from src.database.services.service import user_service
+from src.database.service import user_service
 
 
 start_router = Router()
