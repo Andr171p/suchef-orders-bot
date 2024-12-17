@@ -4,7 +4,7 @@ from typing import Any, Dict, List
 
 
 from src.app.schemas.order import OrderSchema
-from src.messages.order_status import OrderStatus
+from src.message.order import OrderStatus
 from src.database.service import user_service
 from src.api import service as api_service
 from src.utils import load_json

@@ -29,13 +29,13 @@ class APISettings(BaseSettings):
 
 
 class MessagesSettings(BaseSettings):
-    statuses: Path = BASE_DIR / "src" / "app" / "statics" / "messages" / "statuses"
+    statuses: Path = BASE_DIR / "src" / "app" / "statics" / "text" / "statuses"
     images: Path = BASE_DIR / "src" / "app" / "statics" / "images" / "statuses"
 
 
 class Settings(BaseSettings):
     db: DBSettings = DBSettings()
-    api: APISettings = APISettings
+    api: APISettings = APISettings()
     msg: MessagesSettings = MessagesSettings()
 
 
