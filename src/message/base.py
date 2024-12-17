@@ -1,16 +1,15 @@
 from pathlib import Path
 from aiogram.types.base import MutableTelegramObject
+from aiogram.types.input_file import InputFile
 
 
 class BaseTextMessage:
-    chat_id: int | None
     text: str
     keyboard: MutableTelegramObject | None
 
 
 class BasePhotoMessage:
-    chat_id: int | None
-    photo: bytes
+    photo: InputFile
     text: str
     keyboard: MutableTelegramObject | None
 

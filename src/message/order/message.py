@@ -1,5 +1,5 @@
 from src.message.base import BasePhotoMessage
-from src.message.order.status import OrderStatus
+from src.message.order.base import OrderStatus
 
 
 class OrderStatusMessage(BasePhotoMessage):

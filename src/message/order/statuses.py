@@ -2,7 +2,7 @@ from pathlib import Path
 
 from src.config import settings
 from src.message import utils
-from src.message.order.status import OrderStatus
+from src.message.order.base import OrderStatus
 
 
 text_dir: Path = settings.msg.statuses

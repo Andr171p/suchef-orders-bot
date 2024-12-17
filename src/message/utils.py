@@ -23,9 +23,9 @@ async def load_txt(path: Path | str) -> str:
         return await file.read()
 
 
-async def load_png(path: Path | str) -> bytes:
+async def load_png(path: Path | str) -> ...:
     async with aiofiles.open(
         file=path,
         mode='rb'
     ) as file:
-        return await file.read()
+        return file

@@ -4,40 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42feac6b-ce57-4eb2-98ec-7b977d6ff055" name="Changes" comment="">
+    <list default="true" id="42feac6b-ce57-4eb2-98ec-7b977d6ff055" name="Changes" comment="[suchef-orders-bot] 18.12.2024 add message classes">
+      <change afterPath="$PROJECT_DIR$/src/broadcast/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/broadcast/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/broadcast/callback.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/broadcast/logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/broadcast/order_status.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/broadcast/rmq/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/broadcast/rmq/consumer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/broadcast/send.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/message/order/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lifespan.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lifespan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/bot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routers/order_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/order_status.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/routers/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routers/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/schemas/order.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/schemas/order.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/schemas/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/schemas/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/schemas/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses/Готов для выдачи.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses/Готов для выдачи.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses/Готовится.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses/Готовится.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses/Доставлен.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses/Доставлен.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses/Завершен.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses/Завершен.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses/Отменен.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses/Отменен.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses/Передан курьеру.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses/Передан курьеру.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses/Передан на кухню.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses/Передан на кухню.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses/Приготовлен.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses/Приготовлен.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses/Принят оператором Курьер.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses/Принят оператором Курьер.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses/Принят оператором Самовывоз.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses/Принят оператором Самовывоз.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/statics/messages/statuses/Укомплектован.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/statics/messages/statuses/Укомплектован.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/context.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/context.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/messages/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/messages/order_status/statuses.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/order_status/statuses.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/order/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/order/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/order/status.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/order/status.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/order/statuses.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/order/statuses.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/message/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/message/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +63,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.app.executor": "Run",
+    "Python.utils (1).executor": "Run",
     "Python.utils.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -77,11 +77,56 @@
       <recent name="C:\Users\andre\DeliveryOrdersBot\src\app\statics\images\statuses" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\DeliveryOrdersBot\src\message\order" />
       <recent name="C:\Users\andre\DeliveryOrdersBot\src" />
       <recent name="C:\Users\andre\DeliveryOrdersBot\src\database" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DeliveryOrdersBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="utils (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DeliveryOrdersBot" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/messages" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/messages/utils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DeliveryOrdersBot" />
       <option name="ENV_FILES" value="" />
@@ -106,6 +151,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.utils (1)" />
         <item itemvalue="Python.utils" />
       </list>
     </recent_temporary>
@@ -126,6 +173,37 @@
       <option name="presentableId" value="Default" />
       <updated>1734372045678</updated>
     </task>
+    <task id="LOCAL-00001" summary="[suchef-orders-bot] 17.12.2024">
+      <option name="closed" value="true" />
+      <created>1734382546078</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734382546078</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[suchef-orders-bot] 17.12.2024 init alembic">
+      <option name="closed" value="true" />
+      <created>1734382581258</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734382581258</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[suchef-orders-bot] 18.12.2024 add message classes">
+      <option name="closed" value="true" />
+      <created>1734468641871</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734468641871</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[suchef-orders-bot] 17.12.2024" />
+    <MESSAGE value="[suchef-orders-bot] 17.12.2024 init alembic" />
+    <MESSAGE value="[suchef-orders-bot] 18.12.2024 add message classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="[suchef-orders-bot] 18.12.2024 add message classes" />
   </component>
 </project>

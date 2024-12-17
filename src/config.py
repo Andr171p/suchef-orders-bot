@@ -23,6 +23,16 @@ class DBSettings(BaseSettings):
     echo: bool = True
 
 
+class RMQSettings(BaseSettings):
+    user: str = os.getenv("RMQ_USER")
+    password: str = os.getenv("RMQ_PASSWORD")
+    host: str = os.getenv("RMQ_HOST")
+    port: int = os.getenv("RMQ_PORT")
+
+    queue_name: str = "orders"
+    url: str = f"amqp://{user}:{password}@{host}:{port}"
+
+
 class APISettings(BaseSettings):
     url: str = os.getenv("API_URL")
     headers: Dict[str, str] = {"Content-Type": "application/json; charset=UTF-8"}
@@ -31,12 +41,20 @@ class APISettings(BaseSettings):
 class MessagesSettings(BaseSettings):
     statuses: Path = BASE_DIR / "src" / "app" / "statics" / "text" / "statuses"
     images: Path = BASE_DIR / "src" / "app" / "statics" / "images" / "statuses"
+    start: Path = BASE_DIR / "src" / "app" / "statics" / "messages" / "start.json"
+    auth: Path = BASE_DIR / "src" / "app" / "statics" / "messages" / "auth.json"
+
+
+class BotSettings(BaseSettings):
+    token: str = os.getenv("BOT_TOKEN")
 
 
 class Settings(BaseSettings):
     db: DBSettings = DBSettings()
+    rmq: RMQSettings = RMQSettings()
     api: APISettings = APISettings()
     msg: MessagesSettings = MessagesSettings()
+    bot: BotSettings = BotSettings()
 
 
 settings = Settings()

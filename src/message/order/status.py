@@ -1,25 +1,34 @@
-from aiogram.types.base import MutableTelegramObject
+from dataclasses import dataclass
 
-from src.message import utils
-from src.message.base import BasePath
+from src.message.order.base import OrderStatus
+from src.message.order import statuses
 from src.app.schemas.order import OrderSchema
-from src.app.keyboards.order_status import pay_link_kb, confirmed_link_kb
 
 
-class OrderStatus(BasePath):
+@dataclass
+class Status:
+    order: OrderSchema
 
-    def __init__(self, order: OrderSchema) -> None:
-        self.order = order
-
-    async def photo(self) -> bytes:
-        return await utils.load_png(self.photo_path)
-
-    async def text(self) -> str:
-        template: str = await utils.load_txt(self.text_path)
-        return template.format(**self.order.model_dump())
-
-    async def keyboard(self) -> MutableTelegramObject:
-        pay_link: str = self.order.pay_link
-        if self.order.pay_status != "CONFIRMED":
-            return await pay_link_kb(url=pay_link)
-        return await confirmed_link_kb(url=pay_link)
+    def get_order_status(self) -> OrderStatus:
+        status: str = self.order.status
+        match status:
+            case "Принят оператором":
+                return statuses.AcceptedOperator(self.order)
+            case "Передан на кухню":
+                return statuses.TransferredToKitchen(self.order)
+            case "Готовится":
+                return statuses.Cooking(self.order)
+            case "Приготовлен":
+                return statuses.Cooked(self.order)
+            case "Укомплектован":
+                return statuses.Staffed(self.order)
+            case "Передан курьеру":
+                return statuses.TransferredToCourier(self.order)
+            case "Доставлен":
+                return statuses.Delivered(self.order)
+            case "Готов для выдачи":
+                return statuses.ReadyForPickup(self.order)
+            case "Завершен":
+                return statuses.CompletedSuccessfully(self.order)
+            case "Отменен":
+                return statuses.Canceled(self.order)
